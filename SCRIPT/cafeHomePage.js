@@ -95,7 +95,7 @@ function displayMenu(){
     }
     
     document.querySelector(".cartButton").addEventListener("click", () => {
-        window.location.href = "cafeCartPage.html";
+        window.location.href = "HTML/cafeCartPage.html";
     });
 }
 
