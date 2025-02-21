@@ -1,12 +1,13 @@
-import { cart } from "./DATA/cartItems.js";
+import { cart, cartItemsCalculator } from "./DATA/cartItems.js";
 
-console.log(cart);
+
 
 
 
 displayCartItems();
 
 function displayCartItems(){
+    updateCartCount();
     let cartDisplayHTML='';
     cart.forEach((item) => {
         cartDisplayHTML+=`<div class="cartItemCard">
@@ -64,6 +65,11 @@ function displayCartItems(){
         });
     });
 }
+
+function updateCartCount() {
+    document.querySelector(".cartCount").innerHTML = cartItemsCalculator(cart);
+}
+
 
 function saveToCart(){
     localStorage.setItem('Cart', JSON.stringify(cart));
