@@ -1,0 +1,173 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 2px solid rgb(245, 245, 245);
+
+
+    .logo{
+        margin-top: 0;
+        margin-left: 25px;
+        font-weight: bold;
+        width: 100px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    
+
+        .logoText{
+            color:black;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+    }
+}
+
+.cartItemsDisplay{
+    height: calc(100vh - 50px);
+    width: 700px;
+    display: flex;
+    flex-direction: column ; 
+    row-gap: 10px;
+
+    .cartItemCard{
+        position: relative;
+        top: 60px;
+        left: 35px;
+        height: 250px;
+        width: 700px;
+        border: 2px solid rgb(245, 245, 245);
+        overflow-y: none;
+        display: flex;
+        flex-direction: row ;
+
+        .cartItemImageBox{
+            margin-left: -8px;
+            padding: 0px;
+            width: 200px;
+            height: 250px;
+
+            .cartItemImage{
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .cartItemInfoBox{
+        margin-left: 10px;
+        padding: 0px;
+        margin-top: 0;
+        width: 490px;
+        height: 250px;
+
+        .cartItemName{
+            margin-top: 10px;
+            width: fit-content;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+
+        .cartItemPrice{
+            margin-top: 10px;
+            width: fit-content;
+            font-weight: bold;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+            color: black;
+        }
+
+        .cartItemQuantityBox{
+            margin-top: 10px;
+            height: 10px;
+            width: 150px;
+            display: flex;
+            flex-direction: row ;
+            align-items: center;
+            padding: 10px;
+            justify-content: space-between;
+            border-radius: 50px;
+            border-style: solid;
+            border-color: rgb(255, 128, 0);
+            border-width: 2px;
+
+            
+
+            .cartItemQuantityText{
+                width: 80px;
+                font-weight: bold;
+                font-size: 15px;
+                font-family: Arial, sans-serif;
+                color: black;
+            }
+
+            .cartItemQuantityNumber{
+                width: 20px;
+                font-weight: bold;
+                font-size: 15px;
+                font-family: Arial, sans-serif;
+                color: black;
+            }
+
+            .cartItemDecreaseButton{
+                margin-right: 10px;
+                border: none;
+                font-size: 15px;
+                background-color: transparent;
+                cursor: pointer;
+            }
+
+            .cartItemIncreaseButton{
+                background-color: transparent;
+                border: none;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        }
+
+        .cartItemRemoveButton{
+            position: relative;
+            top:91px;
+            left: -10px;
+            border: none;
+            font-size: 15px;
+            background-color: rgb(255, 128, 0);
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            border: none;
+            width: 508px;
+            height: 40px;
+            transition: 0.2s;
+        }
+        
+        .cartItemRemoveButton:hover{
+            background-color: rgb(255, 64, 0);
+            color: white;
+        }
+
+        .cartItemRemoveButton:active{
+            transform: translateY(2px);
+            background-color: black;
+            color: red;
+        }
+    }
+}
