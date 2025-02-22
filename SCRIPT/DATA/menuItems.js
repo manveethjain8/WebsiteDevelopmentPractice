@@ -12,14 +12,14 @@ export const menu =[{
         itemId:"1"  ,
     },{
         itemName: "Black Tea",
-        itemImage: "/IMAGES/Black-Tea.webp",
+        itemImage: "./IMAGES/Black-Tea.png",
         itemDescription: "Black tea is a type of tea that is more oxidized than oolong and green teas. Black tea is generally stronger in flavor than other teas.",
         itemMoreInfo:"Black tea is one of the most popular and widely consumed teas in the world, known for its rich flavor, dark color, and higher caffeine content compared to other teas. It undergoes full oxidation, which enhances its bold taste and deep aroma. Some studies suggest that black tea contains antioxidants like theaflavins and thearubigins, which may support heart health by improving cholesterol levels and reducing the risk of cardiovascular diseases. Additionally, black tea has been linked to potential benefits such as improved gut health, better focus, and reduced stress levels due to the presence of L-theanine, an amino acid known for its calming effects. Drinking black tea in moderation may also help regulate blood sugar levels and improve digestion, while its polyphenols may have anti-inflammatory properties that contribute to overall wellness. Certain varieties, such as Darjeeling, Assam, Earl Grey, and English Breakfast, offer unique flavors and aromas, making black tea a versatile beverage that can be enjoyed plain, with milk, or infused with spices.",
         itemPrice: 15,
         itemId: "2",
     },{
         itemName: "Green Tea",
-        itemImage: "/IMAGES/Green-Tea.webp",
+        itemImage: "./IMAGES/Green-Tea.png",
         itemDescription: "Green tea is a type of tea made from the leaves and buds of the Camellia sinensis that have not undergone the withering and oxidation process that creates oolong teas and black teas.",
         itemMoreInfo:"Many claims suggest that green tea offers significant health benefits, but scientific research has found little strong evidence to support them. While its caffeine content may enhance mental alertness, studies show weak and inconclusive evidence that it reduces the risk of cancer or cardiovascular diseases, and there is no proven effect on weight loss. Some antioxidants in green tea, such as catechins, are believed to have positive effects on health, but their actual impact remains uncertain. Excessive consumption, particularly of green tea extract, has been linked to liver damage, digestive issues, and, in rare cases, insomnia, high blood pressure, and skin reactions. Additionally, drinking too much green tea may interfere with iron absorption, potentially leading to anemia in some individuals. Overall, green tea is safe and can be enjoyed as a refreshing beverage, but its health benefits are often overstated, and excessive intake may lead to adverse effects.",
         itemPrice: 15,
