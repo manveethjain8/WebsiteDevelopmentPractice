@@ -14,7 +14,7 @@ function loginFunction(){
 
     if (accountFound) {
         if (accountFound.password === enteredPassword) {
-            window.location.href = './index.html';
+            window.location.href = './cafeHomePage.html';
         } else {
             document.querySelector('.enteredPassword').classList.add('invalidPassword');
         }
