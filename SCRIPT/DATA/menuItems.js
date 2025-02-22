@@ -5,7 +5,7 @@ export function returnItemFunction(itemId){
 
 export const menu =[{
         itemName:"Coffee",
-        itemImage:"https://manveethjain8.github.io/WebsiteDevelopmentPractice/IMAGES/Hot-Coffee.png",
+        itemImage:"../../IMAGES/Hot-Coffee.png",
         itemDescription:"Coffee is a beverage brewed from roasted, ground coffee beans. Darkly colored, bitter, and slightly acidic, coffee has a stimulating effect on humans, primarily due to its caffeine content, but decaffeinated coffee is also commercially available.",
         itemMoreInfo:"Coffee production in India is primarily concentrated in the hill tracts of South Indian states, with Karnataka leading the way, accounting for 71% of the country's coffee production. The Kodagu district alone contributes 33% of India's total coffee output. Kerala follows with 21%, and Tamil Nadu contributes 5%, which equals approximately 8,200 tonnes.Coffee is grown in three primary regions in India: Karnataka, Kerala, and Tamil Nadu. These states form the traditional coffee-growing region. In addition, newer coffee-growing areas have developed in non-traditional regions such as Andhra Pradesh and Odisha on the eastern coast. Northeastern India, comprising Assam, Manipur, Meghalaya, Mizoram, Tripura, Nagaland, and Arunachal Pradesh—collectively known as the \"Seven Sister States\"—also grows coffee.The two main types of coffee grown in India are Arabica and Robusta. Arabica was first introduced in the Baba Budan Giri hill ranges of Chikmagalur district in Karnataka during the 17th century. Over the years, it has been marketed under popular brand names such as Kent and S.795.",
         itemPrice:20,
