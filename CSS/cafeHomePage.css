@@ -6,6 +6,15 @@ html, body {
     overflow: hidden;
 }
 
+.cafeBackgroundImage {
+    position: fixed;
+    top:0;
+    height: 100dvh;
+    width: 100dvw;
+    opacity: 100%;
+    z-index: 99;
+}
+
 .header {
     margin: 0;
     padding: 0;
@@ -14,7 +23,8 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
-    border: 2px solid rgb(245, 245, 245);
+    border-bottom: 1px solid rgb(245, 245, 245);
+    z-index: 100;
 }
 
 .logo {
@@ -30,7 +40,7 @@ html, body {
 }
 
 .logoText {
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 18px;
     font-family: Arial, sans-serif;
@@ -93,13 +103,16 @@ html, body {
     top: 50px;
     height: calc(100vh - 50px);
     column-gap: 10px;
+    z-index: 100;
 }
 
 .recipeCard {
     width: 250px;
     height: 500px;
     display: inline-block;
-    border: 2px solid rgb(245, 245, 245);
+    border: 1px solid rgb(155, 152, 152);
+    background-color: rgba(0, 0, 0, 0.64);
+    border-radius: 5px;
 }
 
 .recipeImage {
@@ -111,6 +124,8 @@ html, body {
     width: 250px;
     height: 250px;
     object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .recipeInfo {
@@ -127,7 +142,7 @@ html, body {
     font-weight: bold;
     font-size: 24px;
     font-family: Arial, sans-serif;
-    color: black;
+    color: white;
 }
 
 .moreOnRecipe {
@@ -137,7 +152,7 @@ html, body {
     width: fit-content;
     font-size: 16px;
     font-family: Arial, sans-serif;
-    color: black;
+    color: white;
 }
 
 .buttons {
@@ -190,8 +205,8 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.684);
+    z-index: 100;
 }
 
 .popupWindow {
@@ -203,9 +218,10 @@ html, body {
     z-index: 100;
     left: 50%;
     top: 50%;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.447);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    border: 1px solid rgb(155, 152, 152);
 }
 
 .itemImageBox {
@@ -237,7 +253,7 @@ html, body {
     font-weight: bold;
     font-size: 24px;
     font-family: Arial, sans-serif;
-    color: black;
+    color: white;
 }
 
 .popupItemFacts {
@@ -248,7 +264,7 @@ html, body {
     width: fit-content;
     font-size: 16px;
     font-family: Arial, sans-serif;
-    color: black;
+    color:white;
     line-height: 20px;
 }
 
@@ -258,7 +274,7 @@ html, body {
     width: fit-content;
     font-size: 16px;
     font-family: Arial, sans-serif;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 
@@ -268,13 +284,13 @@ html, body {
     width: fit-content;
     font-size: 16px;
     font-family: Arial, sans-serif;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 
 .popupItemQuantitySelector {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     font-size: 16px;
     font-family: Arial, sans-serif;
     border: 1px solid rgb(225, 224, 224);

@@ -6,6 +6,15 @@ html, body {
     overflow: hidden;
 }
 
+.cartPageBackground{
+    position: fixed;
+    top:0;
+    height: 100dvh;
+    width: 100dvw;
+    opacity: 100%;
+    z-index: 98;
+}
+
 .header {
     margin: 0;
     padding: 0;
@@ -14,7 +23,9 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
-    border: 2px solid rgb(245, 245, 245);
+    border-bottom: 1px solid rgb(245, 245, 245);
+    z-index: 100;
+    opacity: 100%;
 }
 
 .header .logo {
@@ -30,7 +41,7 @@ html, body {
 }
 
 .header .logoText {
-    color: black;
+    color: white ;   
     font-weight: bold;
     font-size: 18px;
     font-family: Arial, sans-serif;
@@ -82,14 +93,19 @@ html, body {
     width: 20px;
     height: 20px;
     text-align: center;
-}
+}   
 
 .cartItemsDisplay {
-    height: calc(100vh - 50px);
+    height: 100dvh;
     width: 700px;
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    z-index: 99;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    scrollbar-width:none; 
+    overflow-wrap: anywhere ;
 }
 
 .cartItemsDisplay .cartItemCard {
@@ -98,13 +114,16 @@ html, body {
     left: 35px;
     height: 250px;
     width: 700px;
-    border: 2px solid rgb(245, 245, 245);
     display: flex;
     flex-direction: row;
+    z-index: 99;
+    border: 1px solid rgb(155, 152, 152);
+    background-color: rgba(0, 0, 0, 0.605);
+    border-radius: 5px;
 }
 
 .cartItemCard .cartItemImageBox {
-    margin-left: -8px;
+    margin-left: 0px;
     padding: 0;
     width: 200px;
     height: 250px;
@@ -129,7 +148,7 @@ html, body {
     width: fit-content;
     font-weight: bold;
     font-family: Arial, sans-serif;
-    color: black;
+    color: white;
 }
 
 .cartItemInfoBox .cartItemName {
@@ -158,7 +177,7 @@ html, body {
     font-weight: bold;
     font-size: 15px;
     font-family: Arial, sans-serif;
-    color: black;
+    color: white;
 }
 
 .cartItemQuantityBox .cartItemQuantityText {
@@ -175,6 +194,7 @@ html, body {
     font-size: 15px;
     background-color: transparent;
     cursor: pointer;
+    color: white;
 }
 
 .cartItemInfoBox .cartItemRemoveButton {
@@ -187,9 +207,11 @@ html, body {
     cursor: pointer;
     color: white;
     font-weight: bold;
-    width: 508px;
+    width: 500px;
     height: 40px;
     transition: 0.2s;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .cartItemInfoBox .cartItemRemoveButton:hover {
