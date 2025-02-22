@@ -7,7 +7,7 @@ import { cart, cartItemsCalculator } from "./DATA/cartItems.js";
 displayCartItems();
 
 function displayCartItems(){
-    console.log(item.item>Image);
+    console.log(item.itemImage);
     updateCartCount();
     let cartDisplayHTML='';
     cart.forEach((item) => {
