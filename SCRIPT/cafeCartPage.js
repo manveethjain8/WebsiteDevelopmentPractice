@@ -12,7 +12,7 @@ function displayCartItems(){
     cart.forEach((item) => {
         cartDisplayHTML+=`<div class="cartItemCard">
                     <div class="cartItemImageBox">
-                        <img class="cartItemImage" src="${item.itemImage}"alt="Item Image">
+                        <img class="cartItemImage" src=${item.itemImage} alt="Item Image">
                     </div>
                     <div class="cartItemInfoBox">
                         <h3 class="cartItemName">${item.itemName}</h3>
