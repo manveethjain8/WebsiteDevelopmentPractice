@@ -7,10 +7,10 @@ import { cart, cartItemsCalculator } from "./DATA/cartItems.js";
 displayCartItems();
 
 function displayCartItems(){
-    console.log(item.itemImage);
     updateCartCount();
     let cartDisplayHTML='';
     cart.forEach((item) => {
+        console.log(item.itemImage);
         cartDisplayHTML+=`<div class="cartItemCard">
                     <div class="cartItemImageBox">
                         <img class="cartItemImage" src=${item.itemImage} alt="Item Image">
