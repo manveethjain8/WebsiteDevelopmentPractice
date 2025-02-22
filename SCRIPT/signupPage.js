@@ -3,7 +3,6 @@ let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
 
 
 function signUpFunction(){
-        document.querySelector('.enteredEmail').classList.remove('invalidEmail');
     
         let enteredEmail = document.querySelector('.enteredEmail').value;
         let enteredPassword = document.querySelector('.enteredPassword').value;
@@ -11,6 +10,7 @@ function signUpFunction(){
         if(enteredEmail === '' || enteredPassword === ''){
             document.querySelector('.enteredEmail').classList.add('invalidEmail');
             document.querySelector('.enteredPassword').classList.add('invalidEmail');
+            signUpFunction();
         }
     
         let accountFound = accounts.find(account => enteredEmail === account.email);
