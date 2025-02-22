@@ -1,5 +1,5 @@
 import { cart, cartItemsCalculator } from "./DATA/cartItems.js";
-
+console.loag(cart);
 
 
 
