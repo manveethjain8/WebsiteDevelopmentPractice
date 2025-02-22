@@ -10,7 +10,6 @@ function displayCartItems(){
     updateCartCount();
     let cartDisplayHTML='';
     cart.forEach((item) => {
-        console.log(item.itemImage);
         cartDisplayHTML+=`<div class="cartItemCard">
                     <div class="cartItemImageBox">
                         <img class="cartItemImage" src=${item.itemImage} alt="Item Image">
