@@ -2,10 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-<<<<<<< HEAD
 const path = require('path');
-=======
->>>>>>> 18f2c99ce997068931bfba9ebe723f3d7e47e5f3
+
+
 
 const app = express();
 
@@ -30,7 +29,7 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model('users', UserSchema);
 
-<<<<<<< HEAD
+
 
 app.use('/images', express.static(path.join(__dirname, 'Images')));
 
@@ -61,8 +60,6 @@ const Cart = mongoose.model('carts', cartSchema);
 
 
 
-=======
->>>>>>> 18f2c99ce997068931bfba9ebe723f3d7e47e5f3
 // Register API (Store Email & Password Directly)
 app.post('/api/register', async (req, res) => {
     try {
@@ -107,7 +104,6 @@ app.post('/api/login', async (req, res) => {
 });
 
 
-<<<<<<< HEAD
 app.get('/api/menu', async (req, res) => {
     try {
         const menuItems = await Menu.find({});// ✅ Debugging
@@ -121,8 +117,6 @@ app.get('/api/menu', async (req, res) => {
 
 
 
-=======
->>>>>>> 18f2c99ce997068931bfba9ebe723f3d7e47e5f3
 // Start Server
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
