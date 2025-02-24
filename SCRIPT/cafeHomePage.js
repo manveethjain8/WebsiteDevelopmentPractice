@@ -5,7 +5,8 @@ let menu=[];
 
 const loadMenu = async () => {
     try {
-        menu = await fetchMenu(); // ✅ Store fetched menu globally
+        menu = await fetchMenu();
+        updateCartCount(); // ✅ Store fetched menu globally
         displayMenu(); // ✅ Call displayMenu() only after menu is loaded
     } catch (error) {
         console.error("Error fetching menu:", error);
@@ -14,8 +15,6 @@ const loadMenu = async () => {
 loadMenu();
 
 let itemDisplayHTML='';
-
-updateCartCount();
 
 
 function displayMenu(){
