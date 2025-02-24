@@ -9,7 +9,7 @@ function signUpFunction() {
     }
 
     // Send data to backend instead of local storage
-    fetch('http://localhost:5000/api/register', {
+    fetch('http://localhost:5001/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: enteredEmail, password: enteredPassword })

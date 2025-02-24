@@ -2,6 +2,7 @@ import { fetchMenu, returnItemFunction } from "./DATA/menuItems.js";
 import { cart, cartItemsCalculator } from "./DATA/cartItems.js";
 
 let menu=[];
+updateCartCount();
 
 const loadMenu = async () => {
     try {

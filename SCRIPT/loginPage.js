@@ -7,7 +7,7 @@ function loginFunction() {
     document.querySelector('.enteredPassword').classList.remove('invalidPassword');
 
     // Send login request to backend
-    fetch('http://localhost:5000/api/login', {
+    fetch('http://localhost:5001/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: enteredEmail, password: enteredPassword })
