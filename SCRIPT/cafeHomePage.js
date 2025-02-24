@@ -1,11 +1,22 @@
-import { menu, returnItemFunction } from "./DATA/menuItems.js";
+import { fetchMenu, returnItemFunction } from "./DATA/menuItems.js";
 import { cart, cartItemsCalculator } from "./DATA/cartItems.js";
+
+let menu=[];
+
+const loadMenu = async () => {
+    try {
+        menu = await fetchMenu(); // ✅ Store fetched menu globally
+        displayMenu(); // ✅ Call displayMenu() only after menu is loaded
+    } catch (error) {
+        console.error("Error fetching menu:", error);
+    }
+};
+loadMenu();
 
 let itemDisplayHTML='';
 
 updateCartCount();
 
-displayMenu();
 
 function displayMenu(){
     menu.forEach((item) => {

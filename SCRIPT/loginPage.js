@@ -1,48 +1,58 @@
-console.log(localStorage);
-let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
-console.log(accounts);
-
-function loginFunction(){
-    document.querySelector('.enteredEmail').classList.remove('invalidEmail');
-    document.querySelector('.enteredPassword').classList.remove('invalidPassword');
-
-
+function loginFunction() {
     let enteredEmail = document.querySelector('.enteredEmail').value;
     let enteredPassword = document.querySelector('.enteredPassword').value;
 
-    let accountFound = accounts.find(account => enteredEmail === account.email);
+    // Remove validation errors
+    document.querySelector('.enteredEmail').classList.remove('invalidEmail');
+    document.querySelector('.enteredPassword').classList.remove('invalidPassword');
 
-    if (accountFound) {
-        if (accountFound.password === enteredPassword) {
-            window.location.href = './cafeHomePage.html';
+    // Send login request to backend
+    fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: enteredEmail, password: enteredPassword })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert(data.error);
+            if (data.error === 'Invalid email') {
+                document.querySelector('.enteredEmail').classList.add('invalidEmail');
+            } else if (data.error === 'Incorrect password') {
+                document.querySelector('.enteredPassword').classList.add('invalidPassword');
+            }
         } else {
-            document.querySelector('.enteredPassword').classList.add('invalidPassword');
+            alert('Login successful! Redirecting...');
+            window.location.href = './cafeHomePage.html'; // Redirect to home page
         }
-    } else {
-        document.querySelector('.enteredEmail').classList.add('invalidEmail');
-    }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Something went wrong!');
+    });
 }
 
+// Click login button
 document.querySelector('.loginButton').addEventListener('click', () => {
     loginFunction();
 });
 
-
-
-document.addEventListener('keydown',(event)=>{
-    if(event.key==="Enter"){
+// Enter key triggers login
+document.addEventListener('keydown', (event) => {
+    if (event.key === "Enter") {
         loginFunction();
     }
 });
 
-document.querySelector('.signUpButton').addEventListener('click',()=>{
-    window.location.href='./signupPage.html';
+// Redirect to signup page
+document.querySelector('.signUpButton').addEventListener('click', () => {
+    window.location.href = './signupPage.html';
 });
 
+// Remove validation styles when typing
 document.querySelector('.enteredEmail').addEventListener('keydown', () => {
     document.querySelector('.enteredEmail').classList.remove('invalidEmail');
 });
-
 document.querySelector('.enteredPassword').addEventListener('keydown', () => {
     document.querySelector('.enteredPassword').classList.remove('invalidPassword');
 });
